@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Prediksi Diagnosa Stroke</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Multi-step-form.css">
+</head>
+
+<body>
+    <h1 class="display-5" align="center" style="margin-top: 3%;">Diagnosa Penyakit Stroke</h1>
+    <section>
+        <div id="multple-step-form-n" class="container overflow-hidden" style="margin-top: 10px; padding-top: 10px; height: auto;">
+            <div id="progress-bar-button" class="multisteps-form">
+                <div class="row justify-content-center"> <!-- Add justify-content-center class to center the content -->
+                    <div class="col-12 col-lg-8 mb-4"> <!-- Remove ml-auto and mr-auto classes -->
+                        <div class="multisteps-form__progress">
+                            <a class="btn multisteps-form__progress-btn js-active" role="button" title="User Info">Identitas</a>
+                            <a class="btn multisteps-form__progress-btn" role="button" title="User Info">Status</a>
+                            <a class="btn multisteps-form__progress-btn" role="button" title="User Info">Data Check Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <div id="multistep-start-row" class="row">
+                <div id="multistep-start-column" class="col-12 col-lg-8 m-auto">
+                    <form action="cbr.php" method="post" id="main-form" class="multisteps-form__form">
+                        <div id="single-form-next" class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                            <h3 class="text-center multisteps-form__title">Identitas</h3>
+                            <div id="form-content" class="multisteps-form__content">
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="col-12"><input class="form-control multisteps-form__input" name="nama" type="text" placeholder="Nama Anda"></div>
+                                </div>
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="col-12"><input class="form-control multisteps-form__input" name="umur" type="number" placeholder="Umur"></div>
+                                </div>
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Jenis Kelamin</label>
+                                        <select name="jenis_kelamin" form="main-form" class="form-select">
+                                            <option selected>Pilih Jenis Kelamin..</option>
+                                            <option value="1">Laki - laki</option>
+                                            <option value="0">Perempuan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="next-button" class="button-row d-flex mt-4"><button class="btn btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div>
+                            </div>
+                        </div>
+                        <div id="single-form-next-prev" class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                            <h3 class="text-center multisteps-form__title">Status</h3>
+                            <div id="form-content-1" class="multisteps-form__content">
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Jenis Pekerjaan</label>
+                                        <select name="jenis_pekerjaan" form="main-form" class="form-select">
+                                            <option selected>Pilih Jenis Pekerjaan..</option>
+                                            <option value="1">Anak-anak</option>
+                                            <option value="2">Tidak pernah bekerja</option>
+                                            <option value="3">Pekerjaan partikelir</option>
+                                            <option value="4">Wiraswasta</option>
+                                            <option value="5">Pekerjaan Pemerintahan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Status Pernikahan</label>
+                                        <select name="status_pernikahan" form="main-form" class="form-select">
+                                            <option selected>Pilih ..</option>
+                                            <option value="1">Pernah</option>
+                                            <option value="0">Tidak Pernah</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Area Tempat Tinggal</label>
+                                        <select name="tempat_tinggal" form="main-form" class="form-select">
+                                            <option selected>Pilih ..</option>
+                                            <option value="1">Perkotaan</option>
+                                            <option value="0">Pedesaan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Status Merokok</label>
+                                        <select name="status_merokok" form="main-form" class="form-select">
+                                            <option selected>Pilih ..</option>
+                                            <option value="2">Masih Merokok</option>
+                                            <option value="1">Sudah lama tidak merokok</option>
+                                            <option value="0">Tidak Pernah</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="next-prev-buttons" class="button-row d-flex mt-4"><button class="btn btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button><button class="btn btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div>
+                            </div>
+                        </div>
+                        <div id="single-form-next-prev-1" class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                            <h3 class="text-center multisteps-form__title">Data Check Up</h3>
+                            <div id="form-content-2" class="multisteps-form__content">
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Diagnosa Hipertensi</label>
+                                        <select name="hipertensi" form="main-form" class="form-select">
+                                            <option selected>Pilih ..</option>
+                                            <option value="1">Ada</option>
+                                            <option value="0">Tidak</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="input-grp-single" class="form-row mt-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Penyakit Jantung</label>
+                                        <select name="penyakit_jantung" form="main-form" class="form-select">
+                                            <option selected>Pilih ..</option>
+                                            <option value="1">Ada</option>
+                                            <option value="0">Tidak</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="input-grp-single-2" class="form-row mt-4">
+                                    <div class="col-12"><input name="glukosa" class="form-control multisteps-form__input" type="text" placeholder="Kadar gula darah (mg/dL)"></div>
+                                </div>
+                                <div id="input-grp-single-2" class="form-row mt-4">
+                                    <div class="col-12"><input name="bmi" class="form-control multisteps-form__input" type="text" placeholder="Body Mass Index (BMI)"></div>
+                                </div>
+                                <style>
+                                    /* Custom CSS to create space between buttons */
+                                    .button-row .btn {
+                                        margin-right: 10px; /* Adjust the margin as needed to control spacing */
+                                    }
+                                </style>
+                                
+                                <div id="next-prev-buttons-1" class="button-row d-flex mt-4">
+                                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                                    <button class="btn btn-primary" type="submit">Tampilkan Hasil</button>
+                                </div>                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Multi-step-form.js"></script>
+</body>
+
+</html>
